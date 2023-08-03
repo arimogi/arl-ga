@@ -20,6 +20,7 @@ rho = 0.3  # Specify rho value
 mu = 0  # Specify mu value
 sigma = 1  # Specify sigma value
 n = 10  # Specify the number of cycles
+hall_of_fame = [-1, 0, 0, 0]
 
 def c(Lu, mu, sigma):
     # Compute probability using CDF of standard normal distribution
@@ -97,8 +98,8 @@ stats.register("min", np.min, axis=0)
 #population, logbook = algorithms.eaSimple(population, toolbox, cxpb=0.5, mutpb=0.2, ngen=num_generations,
 #                                          stats=stats, halloffame=hall_of_fame)
 
-population = algorithms.eaSimple(population, toolbox, cxpb=0.5, mutpb=0.2, ngen=num_generations,
-                                stats=stats, halloffame=hall_of_fame)
+#population = algorithms.eaSimple(population, toolbox, cxpb=0.5, mutpb=0.2, ngen=num_generations,
+#                                stats=stats, halloffame=hall_of_fame)
 
 # Get the best individual from the hall of fame
 best_individual = hall_of_fame[0]
